@@ -1,13 +1,11 @@
-FROM python:3.8-slim
+FROM node:14
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 
 EXPOSE 8082
-
-CMD ["uvicorn", "whatsapp_api:app", "--host", "0.0.0.0", "--port", "8082"]
+CMD ["node", "whatsapp_api.js"]

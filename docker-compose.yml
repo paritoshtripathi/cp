@@ -40,10 +40,11 @@ services:
       - KAFKA_BROKER=${KAFKA_BROKER}
   whatsapp-api:
     build:
-      context: ./backend/channels/whatsapp
-    ports:
-      - "8082:8082"
+      context: ./channels/whatsapp
+      dockerfile: Dockerfile
     environment:
       - WHATSAPP_PHONE_NUMBER_ID=${WHATSAPP_PHONE_NUMBER_ID}
       - WHATSAPP_API_TOKEN=${WHATSAPP_API_TOKEN}
+    ports:
+      - "8082:8082"
   
