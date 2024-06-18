@@ -15,7 +15,7 @@ type Message struct {
 }
 
 func StartConsumer() {
-	brokers := []string{"localhost:8080"}
+	brokers := []string{"localhost:9092"}
 	config := sarama.NewConfig()
 	config.Consumer.Return.Errors = true
 
@@ -44,7 +44,7 @@ func StartConsumer() {
 
 func sendToWhatsApp(message Message) {
 	payload, _ := json.Marshal(message)
-	_, err := http.Post("http://whatsapp-api:8000/send_message/", "application/json", bytes.NewBuffer(payload))
+	_, err := http.Post("http://whatsapp-api:8082/send_message/", "application/json", bytes.NewBuffer(payload))
 	if err != nil {
 		log.Printf("Failed to send message to WhatsApp API: %s", err)
 	}

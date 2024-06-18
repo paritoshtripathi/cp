@@ -15,7 +15,7 @@ type OTPMessage struct {
 }
 
 func StartConsumer() {
-	brokers := []string{"localhost:8081"}
+	brokers := []string{"localhost:9092"}
 	config := sarama.NewConfig()
 	config.Consumer.Return.Errors = true
 
@@ -44,7 +44,7 @@ func StartConsumer() {
 
 func sendToWhatsApp(otpMessage OTPMessage) {
 	payload, _ := json.Marshal(otpMessage)
-	_, err := http.Post("http://whatsapp-api:8000/send_otp/", "application/json", bytes.NewBuffer(payload))
+	_, err := http.Post("http://whatsapp-api:8082/send_otp/", "application/json", bytes.NewBuffer(payload))
 	if err != nil {
 		log.Printf("Failed to send OTP to WhatsApp API: %s", err)
 	}
