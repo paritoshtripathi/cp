@@ -1,0 +1,4 @@
+backend/channels/whatsapp/wa/
+backend/faq-bot-service/venv/
+backend/user-service/node_modules/
+**/log/

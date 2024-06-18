@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: ./backend/user-service
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+  faq-bot-service:
+    build:
+      context: ./backend/faq-bot-service
+    ports:
+      - "8001:8001"
+  message-service:
+    build:
+      context: ./backend/message-service
+    ports:
+      - "8080:8080"
+    environment:
+      - KAFKA_BROKER=${KAFKA_BROKER}
+  otp-service:
+    build:
+      context: ./backend/otp-service
+    ports:
+      - "8081:8081"
+    environment:
+      - KAFKA_BROKER=${KAFKA_BROKER}
+  whatsapp-api:
+    build:
+      context: ./backend/channels/whatsapp
+    ports:
+      - "8082:8082"
+    environment:
+      - WHATSAPP_PHONE_NUMBER_ID=${WHATSAPP_PHONE_NUMBER_ID}
+      - WHATSAPP_API_TOKEN=${WHATSAPP_API_TOKEN}
+  

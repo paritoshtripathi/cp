@@ -1,0 +1,10 @@
+
+tracker_store:
+  type: SQL
+  dialect: "postgresql"
+  url: "localhost"
+  db: "rasa"
+  username: "your_username"
+  password: "your_password"
+  login_db: "rasa"
+                

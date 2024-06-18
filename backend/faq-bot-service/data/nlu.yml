@@ -1,0 +1,18 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+
+- intent: ask_faq
+  examples: |
+    - What are your hours of operation?
+    - Where is your store located?
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
