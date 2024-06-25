@@ -1,0 +1,56 @@
+{
+  "message": "An unknown error occurred",
+  "stack": "No stack available",
+  "errorObject": [
+    "_events",
+    "_readableState",
+    "_maxListeners",
+    "socket",
+    "httpVersionMajor",
+    "httpVersionMinor",
+    "httpVersion",
+    "complete",
+    "rawHeaders",
+    "rawTrailers",
+    "joinDuplicateHeaders",
+    "aborted",
+    "upgrade",
+    "url",
+    "method",
+    "statusCode",
+    "statusMessage",
+    "client",
+    "_consuming",
+    "_dumped",
+    "req",
+    "_eventsCount"
+  ]
+}
+{
+  "message": "An unknown error occurred",
+  "stack": "No stack available",
+  "errorObject": [
+    "_events",
+    "_readableState",
+    "_maxListeners",
+    "socket",
+    "httpVersionMajor",
+    "httpVersionMinor",
+    "httpVersion",
+    "complete",
+    "rawHeaders",
+    "rawTrailers",
+    "joinDuplicateHeaders",
+    "aborted",
+    "upgrade",
+    "url",
+    "method",
+    "statusCode",
+    "statusMessage",
+    "client",
+    "_consuming",
+    "_dumped",
+    "req",
+    "_eventsCount"
+  ]
+}
